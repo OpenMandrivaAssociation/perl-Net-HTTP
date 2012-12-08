@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 4
+Release:    5
 
 Summary:    Non-blocking HTTP client
 License:    GPL+ or Artistic
@@ -15,8 +15,8 @@ BuildRequires: perl(Compress::Raw::Zlib)
 BuildRequires: perl(IO::Compress::Gzip)
 BuildRequires: perl(IO::Select)
 BuildRequires: perl(IO::Socket::INET)
+BuildRequires: perl-devel
 BuildArch: noarch
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The 'Net::HTTP' class is a low-level HTTP client. An instance of the
@@ -35,7 +35,7 @@ The following methods are provided (in addition to those of
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+%__perl Makefile.PL INSTALLDIRS=vendor
 
 %make
 
@@ -43,16 +43,28 @@ The following methods are provided (in addition to those of
 %make test
 
 %install
-rm -rf %buildroot
 %makeinstall_std
 
-%clean
-rm -rf %buildroot
-
 %files
-%defattr(-,root,root)
 %doc Changes META.yml README
 %{_mandir}/man3/*
 %perl_vendorlib/*
 
+
+%changelog
+* Sun Jan 22 2012 Oden Eriksson <oeriksson@mandriva.com> 6.10.0-4mdv2012.0
++ Revision: 765526
+- rebuilt for perl-5.14.2
+
+* Sat Jan 21 2012 Oden Eriksson <oeriksson@mandriva.com> 6.10.0-3
++ Revision: 764048
+- rebuilt for perl-5.14.x
+
+* Fri Jan 20 2012 Oden Eriksson <oeriksson@mandriva.com> 6.10.0-2
++ Revision: 763095
+- rebuild
+
+* Tue May 03 2011 Guillaume Rousse <guillomovitch@mandriva.org> 6.10.0-1
++ Revision: 664979
+- import perl-Net-HTTP
 
