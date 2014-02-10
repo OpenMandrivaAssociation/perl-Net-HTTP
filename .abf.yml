@@ -1,2 +1,4 @@
+removed_sources:
+  Net-HTTP-6.01.tar.gz: ffefc52e4e171d2b578a6e50d2fd29ea71fcdbe8
 sources:
-  "Net-HTTP-6.01.tar.gz": ffefc52e4e171d2b578a6e50d2fd29ea71fcdbe8
+  Net-HTTP-6.06.tar.gz: d6527ec874d66c33e377a69a579ae6d66a77a5fa
