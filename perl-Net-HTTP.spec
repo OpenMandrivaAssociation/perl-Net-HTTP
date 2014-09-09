@@ -11,6 +11,7 @@ Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Net/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Compress::Raw::Zlib)
+BuildRequires: perl(URI)
 BuildRequires:	perl(IO::Compress::Gzip)
 BuildRequires:	perl(IO::Select)
 BuildRequires:	perl(IO::Socket::INET)
