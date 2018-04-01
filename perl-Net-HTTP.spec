@@ -1,17 +1,17 @@
 %define modname	Net-HTTP
-%define modver 6.07
+%define modver 6.17
 
 Summary:	Non-blocking HTTP client
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{modname}
 Source0:	http://www.cpan.org/modules/by-module/Net/%{modname}-%{modver}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Compress::Raw::Zlib)
-BuildRequires: perl(URI)
+BuildRequires:	perl(URI)
 BuildRequires:	perl(IO::Compress::Gzip)
 BuildRequires:	perl(IO::Select)
 BuildRequires:	perl(IO::Socket::INET)
@@ -45,6 +45,6 @@ The following methods are provided (in addition to those of
 %makeinstall_std
 
 %files
-%doc Changes META.yml README
+%doc Changes META.yml
 %{perl_vendorlib}/*
 %{_mandir}/man3/*
