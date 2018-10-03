@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   Net-HTTP-6.17.tar.gz: 88355f3e5e05bf1a5c2fc88c89bb9a1f1f43f7dd
+sources:
+  Net-HTTP-6.18.tar.gz: ca1281d8d69f036cc812ba7865df5a02b3e2f826

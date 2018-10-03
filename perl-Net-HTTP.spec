@@ -1,5 +1,5 @@
 %define modname	Net-HTTP
-%define modver 6.17
+%define modver 6.18
 
 Summary:	Non-blocking HTTP client
 Name:		perl-%{modname}
@@ -17,6 +17,7 @@ BuildRequires:	perl(IO::Compress::Gzip)
 BuildRequires:	perl(IO::Select)
 BuildRequires:	perl(IO::Socket::INET)
 BuildRequires:	perl-devel
+Requires:       perl(IO::Socket::SSL)
 
 %description
 The 'Net::HTTP' class is a low-level HTTP client. An instance of the
