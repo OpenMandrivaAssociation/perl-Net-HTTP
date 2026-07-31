@@ -1,8 +1,8 @@
 %define modname	Net-HTTP
 Summary:	Non-blocking HTTP client
 Name:		perl-%{modname}
-Version:	6.18
-Release:	4
+Version:	6.24
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/%{modname}
@@ -32,7 +32,7 @@ The following methods are provided (in addition to those of
 'IO::Socket::INET'):
 
 %prep
-%setup -qn %{modname}-%{version}
+%setup -qn %{modname}-%{version} -n Net-HTTP-6.24
 
 %build
 %__perl Makefile.PL INSTALLDIRS=vendor
